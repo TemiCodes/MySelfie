@@ -35,14 +35,4 @@ Webcam.set({
     image_format: "png",
     png_quality: 90
 })
- function takesnapshot(){
-     Webcam.snap(function(data_uri){
-        document.getElementById("selfie").innerHTML = "<img id='image' src=" +data_uri+ ">"
-     })
- }
- function save() {
-     link=document.getElementById("link")
-     image=document.getElementById("image")
-     link.href = image
-     link.click()
- }
+function take_snapshot() { Webcam.snap(function(data_uri) { document.getElementById("selfie").innerHTML = '<img id="selfie_image" src="'+data_uri+'"/>'; }); } function save() { link = document.getElementById("link"); image = document.getElementById("selfie_image").src ; link.href = image; link.click(); }
