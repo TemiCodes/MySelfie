@@ -32,7 +32,7 @@ function speak(){
 Webcam.set({
     width: 350,
     height: 300,
-    image_format: "png",
-    png_quality: 90
+    image_format: "jpg",
+    jpg_quality: 90
 })
 function take_snapshot() { Webcam.snap(function(data_uri) { document.getElementById("selfie").innerHTML = '<img id="selfie_image" src="'+data_uri+'"/>'; }); } function save() { link = document.getElementById("link"); image = document.getElementById("selfie_image").src ; link.href = image; link.click(); }
