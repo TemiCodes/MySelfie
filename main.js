@@ -22,7 +22,7 @@ function speak(){
     var utterthis = new SpeechSynthesisUtterance(speakdata)
     synth.speak(utterthis)
     setTimeout(function(){
-        takesnapshot();
+        take_snapshot();
         save()
 
     },5000)
